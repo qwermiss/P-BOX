@@ -1,0 +1,15 @@
+[
+  {
+    "id": "5a4e33f6-cf25-4764-99b5-a5369370fed7",
+    "name": "🇸🇬 新加坡-200m-lkh1r7yu3",
+    "type": "vless",
+    "server": "sv1.hunas.cn",
+    "serverPort": 18796,
+    "isManual": true,
+    "enabled": true,
+    "delay": -1,
+    "lastTest": 0,
+    "config": "{\"uuid\":\"c4953caa-1976-4ac5-bb08-ab8a07417d73\",\"network\":\"tcp\",\"packet_encoding\":\"xudp\",\"tls\":{\"enabled\":true,\"server_name\":\"yahoo.com\",\"utls\":{\"enabled\":true,\"fingerprint\":\"chrome\"}},\"reality\":{\"enabled\":true,\"public_key\":\"nKC3Dc6fn5oICiSwNMVnSuVDcpBTB22_QkTh1iJAaQw\",\"short_id\":\"ab1962d1fa4d19\",\"spider_x\":\"/\"},\"server_name\":\"yahoo.com\"}",
+    "shareUrl": "vless://c4953caa-1976-4ac5-bb08-ab8a07417d73@sv1.hunas.cn:18796?type=tcp\u0026encryption=none\u0026security=reality\u0026pbk=nKC3Dc6fn5oICiSwNMVnSuVDcpBTB22_QkTh1iJAaQw\u0026fp=chrome\u0026sni=yahoo.com\u0026sid=ab1962d1fa4d19\u0026spx=%2F#%F0%9F%87%B8%F0%9F%87%AC%20%E6%96%B0%E5%8A%A0%E5%9D%A1-200m-lkh1r7yu3"
+  }
+]

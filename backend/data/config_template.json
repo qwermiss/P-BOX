@@ -1,0 +1,741 @@
+{
+  "proxyGroups": [
+    {
+      "name": "自动选择",
+      "type": "url-test",
+      "icon": "zap",
+      "description": "自动测速选择延迟最低的节点",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "useAll": true
+    },
+    {
+      "name": "故障转移",
+      "type": "fallback",
+      "icon": "shield",
+      "description": "按顺序检测节点可用性，自动切换到可用节点",
+      "enabled": true,
+      "proxies": [
+        "香港节点",
+        "台湾节点",
+        "日本节点",
+        "新加坡节点",
+        "美国节点"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "lazy": true
+    },
+    {
+      "name": "节点选择",
+      "type": "select",
+      "icon": "rocket",
+      "description": "手动选择代理节点，是所有分流的默认出口",
+      "enabled": true,
+      "proxies": [
+        "自动选择",
+        "故障转移",
+        "香港节点",
+        "台湾节点",
+        "日本节点",
+        "新加坡节点",
+        "美国节点",
+        "其他节点",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "全球直连",
+      "type": "select",
+      "icon": "target",
+      "description": "国内网站、私有网络直接连接",
+      "enabled": true,
+      "proxies": [
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "name": "AI服务",
+      "type": "select",
+      "icon": "bot",
+      "description": "ChatGPT、Claude、Gemini 等 AI 服务",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "美国节点",
+        "日本节点",
+        "新加坡节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "国外媒体",
+      "type": "select",
+      "icon": "globe",
+      "description": "YouTube、Spotify、TikTok 等",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "日本节点",
+        "新加坡节点",
+        "美国节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "Netflix",
+      "type": "select",
+      "icon": "film",
+      "description": "Netflix 奈飞流媒体",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "新加坡节点",
+        "香港节点",
+        "日本节点",
+        "美国节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "电报消息",
+      "type": "select",
+      "icon": "message-circle",
+      "description": "Telegram 电报消息服务",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "新加坡节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "谷歌服务",
+      "type": "select",
+      "icon": "search",
+      "description": "Google 搜索、Gmail、Google Drive 等",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "日本节点",
+        "美国节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "推特消息",
+      "type": "select",
+      "icon": "twitter",
+      "description": "Twitter/X 社交平台",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "日本节点",
+        "美国节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "脸书服务",
+      "type": "select",
+      "icon": "facebook",
+      "description": "Facebook、Instagram、WhatsApp",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "美国节点",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "游戏平台",
+      "type": "select",
+      "icon": "gamepad-2",
+      "description": "Steam、Epic、PlayStation、Xbox 等游戏平台",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "香港节点",
+        "日本节点",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "哔哩哔哩",
+      "type": "select",
+      "icon": "tv",
+      "description": "哔哩哔哩，港澳台番剧解锁",
+      "enabled": true,
+      "proxies": [
+        "DIRECT",
+        "香港节点",
+        "台湾节点"
+      ]
+    },
+    {
+      "name": "微软服务",
+      "type": "select",
+      "icon": "square",
+      "description": "Microsoft 365、OneDrive、Azure 等",
+      "enabled": true,
+      "proxies": [
+        "DIRECT",
+        "节点选择",
+        "香港节点",
+        "美国节点"
+      ]
+    },
+    {
+      "name": "苹果服务",
+      "type": "select",
+      "icon": "apple",
+      "description": "Apple 服务、App Store、iCloud",
+      "enabled": true,
+      "proxies": [
+        "DIRECT",
+        "节点选择",
+        "美国节点"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "type": "select",
+      "icon": "github",
+      "description": "GitHub 代码托管平台",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "DIRECT",
+        "自动选择"
+      ]
+    },
+    {
+      "name": "广告拦截",
+      "type": "select",
+      "icon": "ban",
+      "description": "拦截广告、隐私追踪、恶意网站",
+      "enabled": true,
+      "proxies": [
+        "REJECT",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "漏网之鱼",
+      "type": "select",
+      "icon": "fish",
+      "description": "未匹配到任何规则的流量",
+      "enabled": true,
+      "proxies": [
+        "节点选择",
+        "自动选择",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "香港节点",
+      "type": "url-test",
+      "icon": "flag",
+      "description": "香港节点自动选择",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "filter": "(?i)香港|沪港|呼港|中港|HKT|HKBN|HGC|WTT|CMI|穗港|广港|京港|🇭🇰|HK|Hongkong|Hong Kong|HongKong|HONG KONG",
+      "useAll": true
+    },
+    {
+      "name": "台湾节点",
+      "type": "url-test",
+      "icon": "flag",
+      "description": "台湾节点自动选择",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "filter": "(?i)台湾|台灣|臺灣|台北|台中|新北|彰化|CHT|HINET|🇹🇼|🇨🇳|TW|Taiwan|TAIWAN",
+      "useAll": true
+    },
+    {
+      "name": "日本节点",
+      "type": "url-test",
+      "icon": "flag",
+      "description": "日本节点自动选择",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "filter": "(?i)日本|东京|東京|大阪|埼玉|京日|苏日|沪日|广日|上日|穗日|川日|中日|泉日|杭日|深日|🇯🇵|JP|Japan|JAPAN",
+      "useAll": true
+    },
+    {
+      "name": "新加坡节点",
+      "type": "url-test",
+      "icon": "flag",
+      "description": "新加坡节点自动选择",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "filter": "(?i)新加坡|狮城|獅城|沪新|京新|泉新|穗新|深新|杭新|广新|廣新|滬新|🇸🇬|SG|Singapore|SINGAPORE",
+      "useAll": true
+    },
+    {
+      "name": "美国节点",
+      "type": "url-test",
+      "icon": "flag",
+      "description": "美国节点自动选择",
+      "enabled": true,
+      "proxies": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true,
+      "filter": "(?i)美国|美國|京美|硅谷|凤凰城|洛杉矶|西雅图|圣何塞|芝加哥|哥伦布|纽约|广美|🇺🇸|US|USA|America|United States",
+      "useAll": true
+    },
+    {
+      "name": "其他节点",
+      "type": "select",
+      "icon": "globe",
+      "description": "其他地区节点",
+      "enabled": true,
+      "proxies": [],
+      "useAll": true
+    }
+  ],
+  "rules": [
+    {
+      "type": "RULE-SET",
+      "payload": "private-domain",
+      "proxy": "全球直连",
+      "noResolve": false,
+      "description": "私有网络域名直连"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "private-ip",
+      "proxy": "全球直连",
+      "noResolve": true,
+      "description": "私有网络 IP 直连"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "ads-domain",
+      "proxy": "广告拦截",
+      "noResolve": false,
+      "description": "广告域名拦截"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "ai-domain",
+      "proxy": "AI服务",
+      "noResolve": false,
+      "description": "AI 平台走代理"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "telegram-domain",
+      "proxy": "电报消息",
+      "noResolve": false,
+      "description": "Telegram 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "telegram-ip",
+      "proxy": "电报消息",
+      "noResolve": true,
+      "description": "Telegram IP"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "twitter-domain",
+      "proxy": "推特消息",
+      "noResolve": false,
+      "description": "Twitter 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "twitter-ip",
+      "proxy": "推特消息",
+      "noResolve": true,
+      "description": "Twitter IP"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "facebook-domain",
+      "proxy": "脸书服务",
+      "noResolve": false,
+      "description": "Facebook 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "youtube-domain",
+      "proxy": "国外媒体",
+      "noResolve": false,
+      "description": "YouTube 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "netflix-domain",
+      "proxy": "Netflix",
+      "noResolve": false,
+      "description": "Netflix 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "spotify-domain",
+      "proxy": "国外媒体",
+      "noResolve": false,
+      "description": "Spotify 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "tiktok-domain",
+      "proxy": "国外媒体",
+      "noResolve": false,
+      "description": "TikTok 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "bilibili-domain",
+      "proxy": "哔哩哔哩",
+      "noResolve": false,
+      "description": "哔哩哔哩域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "google-domain",
+      "proxy": "谷歌服务",
+      "noResolve": false,
+      "description": "Google 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "google-ip",
+      "proxy": "谷歌服务",
+      "noResolve": true,
+      "description": "Google IP"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "github-domain",
+      "proxy": "GitHub",
+      "noResolve": false,
+      "description": "GitHub 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "microsoft-domain",
+      "proxy": "微软服务",
+      "noResolve": false,
+      "description": "Microsoft 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "apple-domain",
+      "proxy": "苹果服务",
+      "noResolve": false,
+      "description": "Apple 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "steam-domain",
+      "proxy": "游戏平台",
+      "noResolve": false,
+      "description": "Steam 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "epic-domain",
+      "proxy": "游戏平台",
+      "noResolve": false,
+      "description": "Epic Games 域名"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "cn-domain",
+      "proxy": "全球直连",
+      "noResolve": false,
+      "description": "国内域名直连"
+    },
+    {
+      "type": "RULE-SET",
+      "payload": "geolocation-!cn",
+      "proxy": "节点选择",
+      "noResolve": false,
+      "description": "国外域名走代理"
+    },
+    {
+      "type": "GEOIP",
+      "payload": "LAN",
+      "proxy": "全球直连",
+      "noResolve": true,
+      "description": "局域网直连"
+    },
+    {
+      "type": "GEOIP",
+      "payload": "CN",
+      "proxy": "全球直连",
+      "noResolve": true,
+      "description": "国内 IP 直连"
+    },
+    {
+      "type": "MATCH",
+      "payload": "",
+      "proxy": "漏网之鱼",
+      "noResolve": false,
+      "description": "未匹配规则走漏网之鱼"
+    }
+  ],
+  "ruleProviders": [
+    {
+      "name": "private-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs",
+      "path": "./ruleset/private-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "私有网络域名"
+    },
+    {
+      "name": "private-ip",
+      "type": "http",
+      "behavior": "ipcidr",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs",
+      "path": "./ruleset/private-ip.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "私有网络 IP"
+    },
+    {
+      "name": "ads-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs",
+      "path": "./ruleset/ads-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "广告域名"
+    },
+    {
+      "name": "ai-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs",
+      "path": "./ruleset/ai-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "AI 平台域名 (OpenAI, Claude, Gemini)"
+    },
+    {
+      "name": "telegram-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs",
+      "path": "./ruleset/telegram-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Telegram 域名"
+    },
+    {
+      "name": "telegram-ip",
+      "type": "http",
+      "behavior": "ipcidr",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs",
+      "path": "./ruleset/telegram-ip.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Telegram IP"
+    },
+    {
+      "name": "twitter-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs",
+      "path": "./ruleset/twitter-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Twitter/X 域名"
+    },
+    {
+      "name": "twitter-ip",
+      "type": "http",
+      "behavior": "ipcidr",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs",
+      "path": "./ruleset/twitter-ip.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Twitter/X IP"
+    },
+    {
+      "name": "facebook-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/facebook.mrs",
+      "path": "./ruleset/facebook-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Facebook 域名"
+    },
+    {
+      "name": "youtube-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs",
+      "path": "./ruleset/youtube-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "YouTube 域名"
+    },
+    {
+      "name": "netflix-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs",
+      "path": "./ruleset/netflix-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Netflix 域名"
+    },
+    {
+      "name": "spotify-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs",
+      "path": "./ruleset/spotify-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Spotify 域名"
+    },
+    {
+      "name": "tiktok-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs",
+      "path": "./ruleset/tiktok-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "TikTok 域名"
+    },
+    {
+      "name": "bilibili-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.mrs",
+      "path": "./ruleset/bilibili-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "哔哩哔哩域名"
+    },
+    {
+      "name": "google-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs",
+      "path": "./ruleset/google-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Google 域名"
+    },
+    {
+      "name": "google-ip",
+      "type": "http",
+      "behavior": "ipcidr",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs",
+      "path": "./ruleset/google-ip.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Google IP"
+    },
+    {
+      "name": "github-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs",
+      "path": "./ruleset/github-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "GitHub 域名"
+    },
+    {
+      "name": "microsoft-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs",
+      "path": "./ruleset/microsoft-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Microsoft 域名"
+    },
+    {
+      "name": "apple-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs",
+      "path": "./ruleset/apple-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Apple 域名"
+    },
+    {
+      "name": "steam-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs",
+      "path": "./ruleset/steam-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Steam 域名"
+    },
+    {
+      "name": "epic-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/epicgames.mrs",
+      "path": "./ruleset/epic-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "Epic Games 域名"
+    },
+    {
+      "name": "cn-domain",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs",
+      "path": "./ruleset/cn-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "国内域名"
+    },
+    {
+      "name": "geolocation-!cn",
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs",
+      "path": "./ruleset/proxy-domain.mrs",
+      "interval": 86400,
+      "format": "mrs",
+      "description": "国外域名"
+    }
+  ]
+}

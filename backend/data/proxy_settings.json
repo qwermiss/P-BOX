@@ -1,0 +1,16 @@
+{
+  "mixedPort": 7890,
+  "socksPort": 7891,
+  "redirPort": 7892,
+  "tproxyPort": 7893,
+  "allowLan": true,
+  "ipv6": false,
+  "mode": "rule",
+  "logLevel": "info",
+  "externalController": "0.0.0.0:9090",
+  "tunEnabled": true,
+  "tunStack": "mixed",
+  "transparentMode": "tun",
+  "autoStart": false,
+  "autoStartDelay": 15
+}

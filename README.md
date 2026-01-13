@@ -50,6 +50,8 @@ Powered by Mihomo (Clash.Meta) Core | Elegant Web UI | One-Click Deployment
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/star8618/P-BOX/main/install.sh | sudo bash
+or
+curl -fsSL https://raw.githubusercontent.com/qwermiss/P-BOX/main/install.sh | bash
 ```
 
 The script will:
